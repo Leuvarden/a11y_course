@@ -1,0 +1,121 @@
+<!-- Simplified example https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html-->
+
+
+<div class="row py-3">
+  <div id="ex2" class="col">
+    <h4>Grid as table</h4>
+    <table role="grid" aria-labelledby="grid2Label" class="data table">
+      <tbody>
+        <tr>
+          <th aria-sort="none">
+            <span tabindex="0" role="button">Date</span>
+          </th>
+          <th tabindex="-1">Description</th>
+          <th tabindex="-1">Category</th>
+          <th aria-sort="ascending">
+            <span tabindex="-1" role="button">Amount</span>
+          </th>
+
+        </tr>
+
+        <tr>
+          <td tabindex="-1">02-Jan-16</td>
+          <td>
+            <div class="editable-text">
+              <span class="edit-text-button" tabindex="-1" role="button">Down Town
+                Grocery</span>
+              <input class="edit-text-input hidden" tabindex="-1" value="">
+            </div>
+          </td>
+          <td class="menu-wrapper">
+            <button tabindex="-1" aria-haspopup="true" aria-controls="menu2">Groceries
+            </button>
+            <ul role="menu" id="menu2" tabindex="-1" style="display: none;">
+              <li role="menuitem" tabindex="-1">Income</li>
+              <li role="menuitem" tabindex="-1">Groceries</li>
+              <li role="menuitem" tabindex="-1">Dining Out</li>
+              <li role="menuitem" tabindex="-1">Auto</li>
+              <li role="menuitem" tabindex="-1">Household</li>
+              <li role="menuitem" tabindex="-1">Beauty</li>
+            </ul>
+          </td>
+          <td tabindex="-1">$250.00</td>
+
+        </tr>
+        <tr>
+          <td tabindex="-1">03-Jan-16</td>
+          <td>
+            <div class="editable-text">
+              <span class="edit-text-button" tabindex="-1" role="button">Hot Coffee</span>
+              <input class="edit-text-input hidden" tabindex="-1" value="">
+            </div>
+          </td>
+          <td class="menu-wrapper">
+            <button tabindex="-1" aria-haspopup="true" aria-controls="menu3">Dining Out
+            </button>
+            <ul role="menu" id="menu3" tabindex="-1" style="display: none;">
+              <li role="menuitem" tabindex="-1">Income</li>
+              <li role="menuitem" tabindex="-1">Groceries</li>
+              <li role="menuitem" tabindex="-1">Dining Out</li>
+              <li role="menuitem" tabindex="-1">Auto</li>
+              <li role="menuitem" tabindex="-1">Household</li>
+              <li role="menuitem" tabindex="-1">Beauty</li>
+            </ul>
+          </td>
+          <td tabindex="-1">$9.00</td>
+        </tr>
+        <tr>
+          <td tabindex="-1">04-Jan-16</td>
+          <td>
+            <div class="editable-text">
+              <span class="edit-text-button" tabindex="-1" role="button">The Filling
+                Station</span>
+              <input class="edit-text-input hidden" tabindex="-1" value="">
+            </div>
+          </td>
+          <td class="menu-wrapper">
+            <button tabindex="-1" aria-haspopup="true" aria-controls="menu4">Auto</button>
+            <ul role="menu" id="menu4" tabindex="-1" style="display: none;">
+              <li role="menuitem" tabindex="-1">Income</li>
+              <li role="menuitem" tabindex="-1">Groceries</li>
+              <li role="menuitem" tabindex="-1">Dining Out</li>
+              <li role="menuitem" tabindex="-1">Auto</li>
+              <li role="menuitem" tabindex="-1">Household</li>
+              <li role="menuitem" tabindex="-1">Beauty</li>
+            </ul>
+          </td>
+          <td tabindex="-1">$88.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="gridIcon"><img src="./img/keyboard(2).png" alt="keyboard icon"></div>
+
+  </div>
+  <div class="col demo-notes">
+    <div>
+      <h4>Code</h4>
+      <div>
+        <pre class="prettyprint lang-html"><code>&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+      ....
+    &lt;tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;02-Jan-16&lt;/th&gt;
+      ....
+    &lt;tr&gt;
+    ....
+  &lt;tbody&gt;
+&lt;table&gt;</code></pre>
+      </div>
+      <h4>Screenreader text</h4>
+      <p class="text-monospace text-white bg-black border rounded">
+          caret enters "Date" cell
+          <br><span class="text-success">column 1</span> Date
+          <br>caret enters "02-Jan-16" cell
+          <br><span class="text-success">row 2 Date column 1</span> 02-Jan-16
+      </p>
+    </div>
+  </div>
+</div>

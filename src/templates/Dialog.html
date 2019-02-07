@@ -1,0 +1,37 @@
+<div class="row  py-3">
+        <div class="col">
+            <h4>Dialog with radios</h4>
+            <div class="d-flex justify-content-center align-items-center">
+                <div id="menuContainer3" class="card"></div>
+
+            </div>
+        </div>
+        <div class="col demo-notes">
+            <div>
+                <h4>Code</h4>
+                    <pre  class="prettyprint"><code>&lt;button aria-haspopup="true"&gt;Menu button &lt;/button&gt;
+&lt;div role="dialog" style="display:none" aria-label="Some dialog"&gt;
+    &lt;label&gt;
+        &lt;input name="dialogRadio" type="radio"&gt;
+        One
+    &lt;/label&gt;
+    &lt;label&gt;
+        &lt;input name="dialogRadio" type="radio"&gt;
+        Two
+    &lt;/label&gt;
+    ...
+    &lt;button&gt;Apply changes&lt;/button&gt;
+    &lt;button&gt;Close&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <h4>Screenreader text</h4>
+                <p class="text-monospace text-white bg-black border rounded">
+                    <span class="text-info">*focus on the button*</span>
+                    <br>Dialog Button
+                    <br><span class="text-success">menu button subMenu clickable</span>  
+                    <br><span class="text-info">*click on the button, dialog opens*</span>
+                    <br>Change Options <span class="text-success">dialog expanded</span> 
+                    <br>Three <span class="text-success">radio button checked 1 of 4</span>
+                </p>
+            </div>
+        </div>
+    </div>

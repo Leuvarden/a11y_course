@@ -1,0 +1,65 @@
+<!-- Simplified example https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html-->
+
+
+<div class="row py-3">
+    <div class="col">
+        <h4>Table with plain text items</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+
+                <tr>
+                    <td>02-Jan-16</td>
+                    <td>Down Town Grocery></td>
+                    <td>Groceries</td>
+                    <td>$250.00</td>
+                </tr>
+                <tr>
+                    <td>03-Jan-16</td>
+                    <td>Hot Coffee</td>
+                    <td>Dining Out</td>
+                    <td>$9.00</td>
+                </tr>
+                <tr>
+                    <td>04-Jan-16</td>
+                    <td>The Filling Station</td>
+                    <td>Auto</td>
+                    <td>$88.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="col demo-notes">
+        <div>
+            <h4>Code</h4>
+            <div>
+                <pre class="prettyprint lang-html"><code>&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Date&lt;/th&gt;
+            ....
+        &lt;tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;02-Jan-16&lt;/th&gt;
+            ....
+        &lt;tr&gt;
+        ....
+    &lt;tbody&gt;
+&lt;table&gt;</code></pre>
+            </div>
+            <h4>Screenreader text</h4>
+            <p class="text-monospace text-white bg-black border rounded">
+                <span class="text-info">caret enters "Date" cell</span>
+                <br><span class="text-success">column 1</span> Date
+                <br><span class="text-info">caret enters "02-Jan-16" cell</span>
+                <br><span class="text-success">row 2 Date column 1</span> 02-Jan-16
+            </p>
+        </div>
+    </div>
+</div>

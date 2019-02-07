@@ -1,0 +1,47 @@
+<div class="row py-3">
+    <div class="col">
+        <h4>Default menu</h4>
+        <div class="row">
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <div id="ieContainer1" class="dropdown"></div>
+            </div>
+            <div class="col-6 demo-notes">
+                    <h4>Code</h4>
+                    <pre class="prettyprint lang-html"><code>&lt;li role="menuitem" tabindex="0">One&lt;/li&gt;
+&lt;li role="menuitem" tabindex="0">Two&lt;/li&gt;
+&lt;li role="menuitem" tabindex="0">Three&lt;/li&gt;
+&lt;li role="menuitem" tabindex="0">Four&lt;/li&gt;</code></pre>
+                    <h4>Screenreader text</h4>
+                    <p class="text-monospace text-white bg-black border rounded pl-1">
+                            <span class="text-info">*focus is on the item*</span>
+                        <br>One 
+                        <br>Two
+                        <br>Three 
+                        <br>Four
+                    </p>
+            </div>
+        </div>
+        <h4>Menu with IE support</h4>
+        <div class="row bg-light">
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <div id="ieContainer2" class="dropdown"></div>
+            </div>
+            <div class="col-6 demo-notes">
+                    <h4>Code</h4>
+                    <pre class="prettyprint lang-html"><code>&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="1">One&lt;/li&gt;
+&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="2">Two&lt;/li&gt;
+&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="3">Three&lt;/li&gt;
+&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="4">Four&lt;/li&gt;</code></pre>
+                    <h4>Screenreader text</h4>
+                    <p class="text-monospace text-white bg-black border rounded">
+                            <span class="text-info">*focus is on the item*</span>
+                        <br>One <span class="text-success">1 of 4</span>
+                        <br>Two <span class="text-success">2 of 4</span>
+                        <br>Three <span class="text-success">3 of 4</span>
+                        <br>Four <span class="text-success">4 of 4</span>
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

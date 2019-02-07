@@ -1,0 +1,79 @@
+<div class="row  py-3">
+    <div class="col">
+        <h4>Grids: List of Recipients</h4>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="recipient-list">
+                <span id="send_to_label">
+                    Send To:
+                </span>
+                <div role="grid" class="pill-list" aria-labelledby="send_to_label" data-wrap-cols="true">
+                    <div role="row" class="pill-item" data-id="1">
+                        <span role="gridcell">
+                            <a id="r1" class="pill-name" tabindex="-1" href="#">
+                                Recipient Name 1
+                            </a>
+                        </span>
+                        <span role="gridcell">
+                            <span id="rb1" class="pill-remove" tabindex="-1" role="button" aria-label="Remove"
+                                aria-labelledby="rb1 r1">
+                                X
+                            </span>
+                        </span>
+                    </div>
+                    <div role="row" class="pill-item" data-id="2">
+                        <span role="gridcell">
+                            <a id="r2" class="pill-name" tabindex="-1" href="#">
+                                Recipient Name 2
+                            </a>
+                        </span>
+                        <span role="gridcell">
+                            <span id="rb2" class="pill-remove" tabindex="-1" role="button" aria-label="Remove"
+                                aria-labelledby="rb2 r2">
+                                X
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div id="recipient-form">
+                    <input id="add-recipient-input" type="text" aria-label="Add Recipient" placeholder="New Recipient Name">
+                    <button id="add-recipient-button">
+                        Add
+                    </button>
+                    <div class="accessible_elem">
+                        Last change to recipient list:
+                        <span aria-live="polite" aria-relevant="text" id="form-action-text"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col demo-notes">
+        <div>
+            <h4>Code</h4>
+            <pre class="prettyprint"><code>&lt;button aria-haspopup="true"&gt;Menu button &lt;/button&gt;
+&lt;div role="dialog" style="display:none" aria-label="Some dialog"&gt;
+&lt;label&gt;
+    &lt;input name="dialogRadio" type="radio"&gt;
+    One
+&lt;/label&gt;
+&lt;label&gt;
+    &lt;input name="dialogRadio" type="radio"&gt;
+    Two
+&lt;/label&gt;
+...
+&lt;button&gt;Apply changes&lt;/button&gt;
+&lt;button&gt;Close&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Screenreader text</h4>
+            <p class="text-monospace text-white bg-black border rounded">
+                <span class="text-success">*focus on the button*</span>
+                <br>Dialog Button
+                <br><span class="text-success">menu button subMenu clickable</span>
+                <br>
+                <br>Change Options <span class="text-success">dialog expanded</span>
+                <br>Three <span class="text-success">radio button checked 1 of 4</span>
+            </p>
+        </div>
+    </div>
+</div>

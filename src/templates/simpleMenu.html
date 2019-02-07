@@ -1,0 +1,33 @@
+<div class="row py-3">
+        <div class="col">
+            <h4>Menu with plain text items</h4>
+            <div class="d-flex justify-content-center align-items-center">
+                <div id="menuContainer1"  class="card"></div>
+
+            </div>
+        </div>
+        <div class="col demo-notes">
+            <div>
+                <h4>Code</h4>
+                <div>
+                    <pre class="prettyprint lang-html"><code>&lt;button aria-haspopup="true"&gt;Menu button &lt;/button&gt;
+&lt;ul role="menu" style="display:none" aria-label="Some menu"&gt;
+    &lt;li role="menuitem" tabindex="0">One&lt;/li&gt;
+    &lt;li role="menuitem" tabindex="0">Two&lt;/li&gt;
+...
+&lt;/ul&gt;
+                        </code>
+                    </pre>
+                </div>
+                <h4>Screenreader text</h4>
+                <p class="text-monospace text-white bg-black border rounded">
+                    <span class="text-info">*focus on the button*</span>
+                    <br>Menu Button
+                    <br><span class="text-success">menu button subMenu clickable </span>
+                    <br><span class="text-info">*Menu is open and focus on the first element</span>
+                    <br>One <span class="text-success">1 of 4</span>
+                    <br>Two <span class="text-success">2 of 4</span>
+                </p>
+            </div>
+        </div>
+    </div>
