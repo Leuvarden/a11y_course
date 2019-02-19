@@ -21,7 +21,7 @@ export default class Menu {
             'aria-label': 'Change Options',
             'style': 'display: block;',
             'role': 'dialog',
-            'class': 'card-body form-group bg-white dropdown-menu'
+            'class': 'p-3 pr-6 form-group bg-white border border-dark'
         });
         this.$widgetContainer.append(this.$widgetButton).append(this.$widgetDiv);
 

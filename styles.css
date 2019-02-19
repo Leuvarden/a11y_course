@@ -5,6 +5,10 @@
     right: 15px;
 }
 
+#menuContainer3 div[role='dialog'] {
+    position: relative;
+}
+
 li:focus {
     box-shadow: 0 0 0 .2rem rgba(0,123,255,.5);
   }
@@ -51,7 +55,7 @@ li:focus {
 [role="menuitemcheckbox"]::before, [role="radio"]::after {
     position: absolute;
     top: 50%;
-    left: 7px;
+    left: 15%;
     transform: translate(-20%, -50%);
     content: '';
 }

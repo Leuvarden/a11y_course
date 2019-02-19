@@ -1,23 +1,71 @@
 <div class="row py-3">
-        <div class="col">
+        <div class="col-5">
             <h4>Menu with plain text items</h4>
             <div class="d-flex justify-content-center align-items-center">
                 <div id="menuContainer1"  class="card"></div>
 
             </div>
+            <h4>Keyboard instructions</h4>
+            <h5>Menu Button</h5>
+            <ul>
+                <li class="py-1"><kbd>Enter</kbd>: opens the menu and places focus on the first menu item.</li>
+                <li class="py-1"><kbd>Space</kbd>: Opens the menu and places focus on the first menu item.</li>
+                <li class="py-1">(Optional) <kbd>Down Arrow</kbd>: opens the menu and moves focus to the first menu item.</li>
+                <li class="py-1">(Optional) <kbd>Up Arrow</kbd>: opens the menu and moves focus to the last menu item.</li>  
+            </ul>
+
+            <h5>Menu</h5>
+            <ul>
+                    <li>
+                      When a <code>menu</code> opens, or when a <code>menubar</code> receives focus,
+                      keyboard focus is placed on the first item.
+                    </li>
+                    <li><kbd>Enter</kbd>: Activates the item and closes the menu.
+                    </li>
+                    <li><kbd>Space</kbd>:(Optional): When focus is on a <code>menuitem</code>, activates the <code>menuitem</code> and closes the menu.
+                    </li>
+                    <li><kbd>Down Arrow, Up Arrow</kbd>: Moves focus to the next(previous) item, optionally wrapping from the last to the first.
+                    </li>
+                    <li><kbd>Home</kbd>: If arrow key wrapping is not supported, moves focus to the first item in the current <code>menu</code> or <code>menubar</code>.</li>
+                    <li><kbd>End</kbd>: If arrow key wrapping is not supported, moves focus to the last item in the current <code>menu</code> or <code>menubar</code>.</li>
+                    <li>Any key that corresponds to a printable character (Optional): Move focus to   the next menu item in the current menu whose label begins with that printable character.</li>
+                    <li><kbd>Escape</kbd>: Close the menu that contains focus and return focus to   the element or context, e.g., menu button or parent <code>menuitem</code>, from which the menu was opened. </li>
+                    <li><kbd>Tab</kbd>: Moves focus to the next element in the tab sequence, and if the item that had focus is not in a <code>menubar</code>, closes its <code>menu</code> and all open parent <code>menu</code> containers.</li>
+                    <li><kbd>Shift + Tab</kbd>: Moves focus to the previous element in the tab sequence, and if the item that had focus is not in a <code>menubar</code>, closes its <code>menu</code> and all open parent <code>menu</code> containers.</li>
+                  </ul>
+    
+            <h4>Links</h4>
+            <ul >
+                <li>
+                    <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menubutton" 
+                    class="font-weight-bold">WAI-ARIA Menu Button</a>
+                </li>
+                <li>
+                    <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/menubar/menubar-2/menubar-2.html" 
+                        class="font-weight-bold">Menu Example</a>
+                    </li>
+            </ul>
+
+            <h4>Notes</h4>
+            <ul>
+                <li class="py-1">Javascript event <code>element.addEventListener("click", () => {...})</code> includes pressing <kbd>Enter</kbd> and <kbd>Space</kbd>, but does not affect <kbd>Down arrow</kbd></li>
+                <li class="py-1">Generally, adding aria-attributes does not add any keyboard navigation</li>
+                <li class="py-1">Standard browser behavior: <kbd>Up Arrow</kbd>, <kbd>Down arrow</kbd>, <kbd>Space</kbd> scroll browser page. Don't forget to add 
+                    <code>event.preventDefault()</code> to event hadlers.
+                </li>
+            </ul>
         </div>
-        <div class="col demo-notes">
+        <div class="col-7 demo-notes">
             <div>
-                <h4>Code</h4>
+                <h4>HTML</h4>
                 <div>
                     <pre class="prettyprint lang-html"><code>&lt;button aria-haspopup="true"&gt;Menu button &lt;/button&gt;
 &lt;ul role="menu" style="display:none" aria-label="Some menu"&gt;
     &lt;li role="menuitem" tabindex="0">One&lt;/li&gt;
     &lt;li role="menuitem" tabindex="0">Two&lt;/li&gt;
-...
-&lt;/ul&gt;
-                        </code>
-                    </pre>
+    &lt;li role="menuitem" tabindex="0">Three&lt;/li&gt;
+    &lt;li role="menuitem" tabindex="0">Four&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                 </div>
                 <h4>Screenreader text</h4>
                 <p class="text-monospace text-white bg-black border rounded">
@@ -27,6 +75,8 @@
                     <br><span class="text-info">*Menu is open and focus on the first element</span>
                     <br>One <span class="text-success">1 of 4</span>
                     <br>Two <span class="text-success">2 of 4</span>
+                    <br>Three <span class="text-success">3 of 4</span>
+                    <br>Four <span class="text-success">4 of 4</span>
                 </p>
             </div>
         </div>

@@ -3,7 +3,7 @@ import selectableMenu from './selectableMenu';
 import DialogMenu from './DialogMenu'
 import ieMenu from './IeMenu'
 import Grid from './Grid'
-import PillList from './pilList'
+// import PillList from './pilList'
 import $ from 'jquery';
 
 import { ieSection, simpleMenuSection, selectMenuSection, DialogSection, GridSection, TableSection, PillSection } from './examplesSection'
@@ -47,6 +47,19 @@ var ex2Grid = new Grid(grid);
 //     } else {
 //         $(icon).hide()
 //     }
+// })
+// const gridItems = [
+//     {text: 'Groceries', isSelected: false}, 
+//     {text: 'Dining Out', isSelected: false}, 
+//     {text: 'Household', isSelected: true}, 
+//     {text: 'Auto', isSelected: false}
+//     ]
+// $('#ex2 td.menu-wrapper button').toArray().forEach((el, i) => {
+//     let id = 'gridButton'+i;
+//     $(el).attr('id', id);
+
+//     let menu = new Menu(id, gridItems, true);
+//     menu.drawMenu()
 // })
 
 

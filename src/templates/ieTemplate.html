@@ -4,6 +4,17 @@
         <div class="row">
             <div class="col-6 d-flex justify-content-center align-items-center">
                 <div id="ieContainer1" class="dropdown"></div>
+                <h4>Links</h4>
+                <ul>
+                    <li>
+                        <a href="https://github.com/FreedomScientific/VFO-standards-support/issues/53" 
+                        class="font-weight-bold" target="_blank">JAWS explanation of the bug</a>
+                    </li>
+                    <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#feed" target="_blank">
+                        When to use aria-setsize and aria-posinset</a></li>
+                        <li><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-posinset" target="_blank">
+                            WAI-ARIA aria-posinset</a></li>
+                </ul>
             </div>
             <div class="col-6 demo-notes">
                     <h4>Code</h4>
@@ -23,15 +34,17 @@
         </div>
         <h4>Menu with IE support</h4>
         <div class="row bg-light">
-            <div class="col-6 d-flex justify-content-center align-items-center">
+            <div class="col-5 d-flex justify-content-center align-items-center">
                 <div id="ieContainer2" class="dropdown"></div>
             </div>
-            <div class="col-6 demo-notes">
+            <div class="col-7 demo-notes">
                     <h4>Code</h4>
-                    <pre class="prettyprint lang-html"><code>&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="1">One&lt;/li&gt;
-&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="2">Two&lt;/li&gt;
-&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="3">Three&lt;/li&gt;
-&lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="4">Four&lt;/li&gt;</code></pre>
+                    <pre class="prettyprint lang-html"><code>&lt;ul role="menu"&gt;
+    &lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="1">One&lt;/li&gt;
+    &lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="2">Two&lt;/li&gt;
+    &lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="3">Three&lt;/li&gt;
+    &lt;li role="menuitem" tabindex="0" aria-setsize="4" aria-posinset="4">Four&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                     <h4>Screenreader text</h4>
                     <p class="text-monospace text-white bg-black border rounded">
                             <span class="text-info">*focus is on the item*</span>

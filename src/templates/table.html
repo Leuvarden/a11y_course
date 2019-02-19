@@ -2,56 +2,73 @@
 
 
 <div class="row py-3">
-    <div class="col">
+    <div class="col mx-3">
         <h4>Table with plain text items</h4>
-        <table class="table">
+        <table class="table table-hover my-3">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Category</th>
-                    <th>Amount</th>
-                </tr>
-
-                <tr>
-                    <td>02-Jan-16</td>
-                    <td>Down Town Grocery></td>
+                    <th scope="row">02-Jan-16</th>
+                    <td><a href="javascript:void(0);">Down Town Grocery</a></td>
                     <td>Groceries</td>
                     <td>$250.00</td>
                 </tr>
                 <tr>
-                    <td>03-Jan-16</td>
-                    <td>Hot Coffee</td>
+                    <th scope="row">03-Jan-16</th>
+                    <td><a href="javascript:void(0);">Hot Coffee</a></td>
                     <td>Dining Out</td>
                     <td>$9.00</td>
                 </tr>
                 <tr>
-                    <td>04-Jan-16</td>
-                    <td>The Filling Station</td>
+                    <th scope="row">04-Jan-16</th>
+                    <td><a href="javascript:void(0);">The Filling Station</a></td>
                     <td>Auto</td>
                     <td>$88.00</td>
                 </tr>
             </tbody>
         </table>
 
+        <h4>Keyboard instructions</h4>
+        <ul class="list-unstyled">
+                <li class="font-weight-bold">Not applicable</li>
+        </ul>
+
+        <h4>Links</h4>
+        <ul class="list-unstyled">
+            <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#table" class="font-weight-bold">WAI-ARIA Table</a></li>
+        </ul>
     </div>
     <div class="col demo-notes">
         <div>
             <h4>Code</h4>
             <div>
                 <pre class="prettyprint lang-html"><code>&lt;table&gt;
-    &lt;tbody&gt;
+    &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;Date&lt;/th&gt;
-            ....
-        &lt;tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;02-Jan-16&lt;/th&gt;
-            ....
-        &lt;tr&gt;
-        ....
+            &lt;th&gt;Description&lt;/th&gt;
+            &lt;th&gt;Category&lt;/th&gt;
+            &lt;th&gt;Amount&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
     &lt;tbody&gt;
-&lt;table&gt;</code></pre>
+        &lt;tr&gt;
+        &lt;tr&gt;
+             &lt;td&gt;02-Jan-16&lt;/td&gt;
+             &lt;td&gt;&lt;a href="#"&gt;Down Town Grocery&lt;/a&gt;&lt;/td&gt;
+             &lt;td&gt;Groceries&lt;/td&gt;
+             &lt;td&gt;$250.00&lt;/td&gt;
+        &lt;tr&gt;
+        /*....and so on*/
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
             </div>
             <h4>Screenreader text</h4>
             <p class="text-monospace text-white bg-black border rounded">
@@ -60,6 +77,7 @@
                 <br><span class="text-info">caret enters "02-Jan-16" cell</span>
                 <br><span class="text-success">row 2 Date column 1</span> 02-Jan-16
             </p>
+
         </div>
     </div>
 </div>

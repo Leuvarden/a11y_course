@@ -9,7 +9,7 @@ export default class SelectableMenu extends Menu {
 
     _addMenuItems() {
         this.items.forEach((item, index) => {
-            let $menuItem = $('<li>' + item.text + '</li>');
+            let $menuItem = $('<li class="text-center">' + item.text + '</li>');
             $menuItem.attr('role', 'menuitemcheckbox');
             $menuItem.attr('tabindex', '0');
 
@@ -44,6 +44,7 @@ export default class SelectableMenu extends Menu {
         switch (event.which) {
             case KeyCode.ENTER:
                 this._handleSelect($currentItem);
+                this.collapsePopup();
                 break;
                 case KeyCode.SPACE:
                 event.preventDefault();

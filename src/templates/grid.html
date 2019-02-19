@@ -2,24 +2,25 @@
 
 
 <div class="row py-3">
-  <div id="ex2" class="col">
+  <div id="ex2" class="col mx-3">
     <h4>Grid as table</h4>
-    <table role="grid" aria-labelledby="grid2Label" class="data table">
-      <tbody>
+    <table role="grid" aria-labelledby="grid2Label" class="data table table-hover my-3">
+      <thead class="table-primary">
         <tr>
-          <th aria-sort="none">
+          <th aria-sort="none" scope="col">
             <span tabindex="0" role="button">Date</span>
           </th>
-          <th tabindex="-1">Description</th>
-          <th tabindex="-1">Category</th>
-          <th aria-sort="ascending">
+          <th tabindex="-1" scope="col">Description</th>
+          <th tabindex="-1" scope="col">Category</th>
+          <th aria-sort="ascending" scope="col">
             <span tabindex="-1" role="button">Amount</span>
           </th>
 
         </tr>
-
+      </thead>
+        <tbody>
         <tr>
-          <td tabindex="-1">02-Jan-16</td>
+          <th tabindex="-1" scope="row">02-Jan-16</th>
           <td>
             <div class="editable-text">
               <span class="edit-text-button" tabindex="-1" role="button">Down Town
@@ -43,7 +44,7 @@
 
         </tr>
         <tr>
-          <td tabindex="-1">03-Jan-16</td>
+          <th tabindex="-1" scope="row">03-Jan-16</th>
           <td>
             <div class="editable-text">
               <span class="edit-text-button" tabindex="-1" role="button">Hot Coffee</span>
@@ -65,7 +66,7 @@
           <td tabindex="-1">$9.00</td>
         </tr>
         <tr>
-          <td tabindex="-1">04-Jan-16</td>
+          <th tabindex="-1" scope="row">04-Jan-16</th>
           <td>
             <div class="editable-text">
               <span class="edit-text-button" tabindex="-1" role="button">The Filling
@@ -88,26 +89,64 @@
         </tr>
       </tbody>
     </table>
-    <div id="gridIcon"><img src="./img/keyboard(2).png" alt="keyboard icon"></div>
 
+
+    <!-- <div id="gridIcon"><img src="./img/keyboard(2).png" alt="keyboard icon"></div> -->
+
+
+    <h4>Keyboard instructions</h4>
+    <ul>
+        <li>
+          <kbd>Right Arrow, Left Arrow</kbd>: Moves focus one cell to the side.
+          If focus is on the right(left)-most cell in the row, focus does not move.
+        </li>
+        <li><kbd>Down Arrow, Up Arrow</kbd>: Moves focus one cell up(down). If focus is on the top(bottom) cell in the column, focus does not move.</li>
+        <li><kbd>Home</kbd>: moves focus to the first cell in the row that contains focus.</li>
+        <li><kbd>End</kbd>: moves focus to the last cell in the row that contains focus.</li>
+        <li><kbd>Control + Home</kbd>: moves focus to the first cell in the first row.</li>
+        <li><kbd>Control + End</kbd>: moves focus to the last cell in the last row.</li>
+      </ul>
+
+    <h4>Links</h4>
+    <ul class="list-unstyled">
+        <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#grid" class="font-weight-bold" target="_blank">WAI-ARIA Grid description</a></li>
+        <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html" class="font-weight-bold" target="_blank">Data Grid Examples</a></li>
+    </ul>
+
+    <h4>Notes</h4>
+    <ul class="list-unstyled">
+        <li>Grid navigation with arrows won't work with NVDA, since it overrides arrows to work like <kbd>Tab</kbd></li>
+    </ul>
   </div>
   <div class="col demo-notes">
     <div>
       <h4>Code</h4>
       <div>
-        <pre class="prettyprint lang-html"><code>&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Date&lt;/th&gt;
-      ....
-    &lt;tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;02-Jan-16&lt;/th&gt;
-      ....
-    &lt;tr&gt;
-    ....
-  &lt;tbody&gt;
-&lt;table&gt;</code></pre>
+<pre class="prettyprint lang-html"><code>&lt;table role="grid"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Date&lt;/th&gt;
+        &lt;th&gt;Description&lt;/th&gt;
+        &lt;th&gt;Category&lt;/th&gt;
+        &lt;th aria-sort="ascending"&gt;Amount&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;02-Jan-16&lt;/td&gt;
+          &lt;td&gt;
+            &lt;div&gt;
+              &lt;input value=""&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;button&gt;Groceries&lt;/button&gt;
+          &lt;/td&gt;
+          &lt;td&gt;$250.00&lt;/td&gt;
+      &lt;tr&gt;
+      /*....and so on*/
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
       </div>
       <h4>Screenreader text</h4>
       <p class="text-monospace text-white bg-black border rounded">
